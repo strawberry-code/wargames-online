@@ -4,6 +4,7 @@ import {apiRoute} from '../utils';
 import {AppProps, AppStates} from "../../server/domain/IApp";
 import {ITest} from "../../server/domain/ITest";
 import {Put, Post, Get, Delete} from "../Services";
+import MyTerminal from "./terminal";
 
 export default class App extends React.Component<AppProps, AppStates> {
     state: AppStates = {
@@ -116,6 +117,9 @@ export default class App extends React.Component<AppProps, AppStates> {
                         <label>{"Test for Delete: "}</label>
                         <h3>{textForDelete}</h3>
                     </div>
+                </div>
+                <div style={{paddingLeft: '15%', paddingRight: '15%'}}>
+                    <MyTerminal/>
                 </div>
             </div>
         );
